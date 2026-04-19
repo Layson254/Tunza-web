@@ -40,11 +40,16 @@
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
 
-                        <label for="amount">Donation Amount</label>
+                        <label for="amount">Donation Amount (USD)</label>
                         <input type="number" id="amount" name="amount" min="5" required>
 
                         <button type="submit" class="btn btn-primary">Give Now</button>
                     </form>
+
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(31, 41, 55, 0.1);">
+                        <h3 style="margin: 1rem 0;">Pay via PesaPal</h3>
+                        <iframe width="200" height="40" src="https://store.pesapal.com/embed-code?pageUrl=https://store.pesapal.com/tunzadada" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="about-image-card">
                     <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Donate for impact" />
@@ -74,13 +79,23 @@
         <div class="container footer-inner">
             <div>
                 <p class="footer-brand">Tunza Dada</p>
-                <p>© 2026 Tunza Dada. All rights reserved.</p>
-                <p>Contact: hello@tunzadada.org | +254 733 708 224</p>
+            </div>
+            <div class="footer-contact">
+                <p>hello@tunzadada.org | hellotunza@gmail.com<br>+254 733 708 224</p>
             </div>
             <div class="footer-links">
                 <a href="../pages/about.html">About</a>
                 <a href="../volunteer/">Volunteer</a>
                 <a href="../pages/programs.html">Programs</a>
+                <a href="../pages/contact.html">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/tunzadada" target="_blank" aria-label="LinkedIn">in</a>
+                <a href="https://www.instagram.com/tunza.dada/" target="_blank" aria-label="Instagram">📷</a>
+                <a href="https://web.facebook.com/tunzadada/" target="_blank" aria-label="Facebook">f</a>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2026 Tunza Dada. All rights reserved.</p>
             </div>
         </div>
     </footer>

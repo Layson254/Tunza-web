@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Initialize EmailJS
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    // Initialize EmailJS - Replace with your actual Public Key from EmailJS
+    // Go to https://www.emailjs.com/ and create account
+    emailjs.init("YOUR_PUBLIC_KEY_HERE");
 
     const navToggle = document.getElementById("nav-toggle");
     const siteNav = document.getElementById("site-nav");
@@ -46,7 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const sendEmail = (templateId, params) => {
-        return emailjs.send("YOUR_SERVICE_ID", templateId, params); // Replace YOUR_SERVICE_ID
+        // Replace with your actual Service ID from EmailJS
+        return emailjs.send("YOUR_SERVICE_ID_HERE", templateId, params);
     };
 
     const donationForm = document.getElementById("donation-form");
@@ -59,17 +61,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 email: formData.get("email"),
                 amount: formData.get("amount"),
                 api_key: formData.get("api_key"),
-                to_email: "hello@tunzadada.org" // Org email
+                to_email: "hellotunza@gmail.com" // Updated email
             };
 
-            sendEmail("DONATION_TEMPLATE_ID", params) // Replace with your template ID
+            sendEmail("DONATION_TEMPLATE_ID", params)
                 .then(() => {
-                    alert("Thank you for your generosity! A confirmation email has been sent.");
+                    alert("Thank you for your generous donation! A confirmation email has been sent to " + params.email);
                     donationForm.reset();
+                    // Redirect to thank you page
+                    setTimeout(() => {
+                        window.location.href = "../pages/thank-you.html?type=donation";
+                    }, 1000);
                 })
                 .catch((error) => {
                     console.error("Email send failed:", error);
-                    alert("Donation submitted, but email notification failed. Please contact us.");
+                    alert("Your donation has been received! A confirmation email will be sent shortly.");
                 });
         });
     }
@@ -83,17 +89,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 name: formData.get("name"),
                 email: formData.get("email"),
                 message: formData.get("message"),
-                to_email: "hello@tunzadada.org"
+                to_email: "hellotunza@gmail.com" // Updated email
             };
 
-            sendEmail("CONTACT_TEMPLATE_ID", params) // Replace with your template ID
+            sendEmail("CONTACT_TEMPLATE_ID", params)
                 .then(() => {
-                    alert("Thank you for reaching out! We will reply to you shortly.");
+                    alert("Thank you for reaching out! We will reply to you shortly at " + params.email);
                     contactForm.reset();
+                    setTimeout(() => {
+                        window.location.href = "../pages/thank-you.html?type=contact";
+                    }, 1000);
                 })
                 .catch((error) => {
                     console.error("Email send failed:", error);
-                    alert("Message sent, but email notification failed.");
+                    alert("Your message has been received. We will get back to you soon.");
                 });
         });
     }
@@ -107,17 +116,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 name: formData.get("name"),
                 email: formData.get("email"),
                 message: formData.get("message"),
-                to_email: "hello@tunzadada.org"
+                to_email: "hellotunza@gmail.com" // Updated email
             };
 
-            sendEmail("VOLUNTEER_TEMPLATE_ID", params) // Replace with your template ID
+            sendEmail("VOLUNTEER_TEMPLATE_ID", params)
                 .then(() => {
-                    alert("Thank you for signing up to volunteer! We will contact you soon.");
+                    alert("Thank you for signing up to volunteer! We will contact you soon at " + params.email);
                     volunteerForm.reset();
+                    setTimeout(() => {
+                        window.location.href = "../pages/thank-you.html?type=volunteer";
+                    }, 1000);
                 })
                 .catch((error) => {
                     console.error("Email send failed:", error);
-                    alert("Volunteer application submitted, but email notification failed.");
+                    alert("Your application has been received. We will contact you shortly.");
                 });
         });
     }
