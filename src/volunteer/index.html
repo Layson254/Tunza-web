@@ -43,20 +43,27 @@
             </div>
         </section>
 
-        <section class="impact-section">
-            <div class="container volunteer-grid">
+        <section class="donate-section">
+            <div class="container about-grid">
                 <div>
-                    <h2>Volunteer Benefits</h2>
-                    <ul class="volunteer-list">
-                        <li><strong>Lead mentorship sessions:</strong> Guide girls through educational challenges</li>
-                        <li><strong>Help run health education workshops:</strong> Share knowledge about menstrual health</li>
-                        <li><strong>Support community fundraising initiatives:</strong> Organize events and drives</li>
-                    </ul>
+                    <p class="eyebrow">Apply to Volunteer</p>
+                    <h1>Join our team and make a difference.</h1>
+                    <p>Fill out the form below to apply for volunteer opportunities with Tunza Dada.</p>
+                    <form id="volunteer-form" action="#" method="post">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Why do you want to volunteer?</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+
+                        <button type="submit" class="btn btn-primary">Apply Now</button>
+                    </form>
                 </div>
-                <div class="donate-card">
-                    <h3>Download Volunteers List</h3>
-                    <p>Access our current volunteer database for coordination and updates.</p>
-                    <a href="https://docs.google.com/spreadsheets/d/1example1234567890/edit?usp=sharing" class="btn btn-primary" target="_blank">Download Excel List</a>
+                <div class="volunteer-image-card">
+                    <img src="https://images.unsplash.com/photo-1515165562835-c37f37d7562f?auto=format&fit=crop&w=900&q=80" alt="Volunteer speaking with girls" />
                 </div>
             </div>
         </section>
@@ -77,6 +84,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>
