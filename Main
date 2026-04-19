@@ -1,0 +1,126 @@
+// React + Tailwind version (compatible with any environment)
+// FIX: Removed Next.js-specific imports (next/image, next/link)
+
+import { useState } from "react";
+
+export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <main className="flex flex-col">
+      {/* NAVBAR */}
+      <header className="fixed top-0 left-0 w-full bg-white shadow z-50">
+        <div className="flex justify-between items-center px-6 py-4">
+          <h1 className="font-bold text-xl text-pink-600">Tunza Dada</h1>
+
+          <nav className="hidden md:flex gap-6">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/programs">Programs</a>
+            <a href="/volunteer">Volunteer</a>
+            <a href="/donate" className="bg-pink-600 text-white px-4 py-2 rounded-xl">Donate</a>
+          </nav>
+
+          <button
+            className="md:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            ☰
+          </button>
+        </div>
+
+        {menuOpen && (
+          <div className="flex flex-col gap-4 px-6 pb-4 md:hidden">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/programs">Programs</a>
+            <a href="/volunteer">Volunteer</a>
+            <a href="/donate" className="bg-pink-600 text-white px-4 py-2 rounded-xl">Donate</a>
+          </div>
+        )}
+      </header>
+
+      {/* HERO SECTION */}
+      <section className="relative h-[90vh] flex items-center justify-center text-center bg-black text-white mt-20">
+        <img
+          src="/hero.jpg"
+          alt="Tunza Dada Impact"
+          className="absolute w-full h-full object-cover opacity-50"
+        />
+        <div className="relative z-10 max-w-2xl px-4">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Empowering Girls. Transforming Futures.
+          </h1>
+          <p className="mb-6 text-lg">
+            Supporting young girls and women through education, mentorship, and dignity programs.
+          </p>
+          <div className="flex gap-4 justify-center">
+            <a href="/donate" className="bg-pink-600 px-6 py-3 rounded-xl">Donate</a>
+            <a href="/volunteer" className="bg-white text-black px-6 py-3 rounded-xl">Volunteer</a>
+          </div>
+        </div>
+      </section>
+
+      {/* IMPACT SECTION */}
+      <section className="py-16 px-6 text-center">
+        <h2 className="text-3xl font-bold mb-8">Our Impact</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <h3 className="text-4xl font-bold text-pink-600">6000+</h3>
+            <p>Girls Supported</p>
+          </div>
+          <div>
+            <h3 className="text-4xl font-bold text-pink-600">100+</h3>
+            <p>Single Mothers Empowered</p>
+          </div>
+          <div>
+            <h3 className="text-4xl font-bold text-pink-600">20+</h3>
+            <p>Community Programs</p>
+          </div>
+        </div>
+      </section>
+
+      {/* PROGRAMS */}
+      <section className="bg-gray-100 py-16 px-6">
+        <h2 className="text-3xl font-bold text-center mb-8">Our Programs</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {["Menstrual Health", "Mentorship", "Economic Empowerment"].map((program) => (
+            <div key={program} className="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+              <h3 className="text-xl font-bold mb-2">{program}</h3>
+              <p className="mb-4">Helping communities through targeted initiatives.</p>
+              <a href="/programs" className="text-pink-600">Learn More →</a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section className="py-16 px-6">
+        <h2 className="text-3xl font-bold text-center mb-8">Gallery</h2>
+        <div className="flex gap-4 overflow-x-auto scroll-smooth">
+          {[1,2,3,4].map((img) => (
+            <div key={img} className="min-w-[300px] h-[200px] relative">
+              <img
+                src={`/gallery${img}.jpg`}
+                alt="Gallery"
+                className="w-full h-full object-cover rounded-xl"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-pink-600 text-white py-16 text-center">
+        <h2 className="text-3xl font-bold mb-4">Make a Difference Today</h2>
+        <p className="mb-6">Your support can change lives.</p>
+        <a href="/donate" className="bg-white text-black px-6 py-3 rounded-xl">Donate Now</a>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-black text-white py-8 text-center">
+        <p>© {new Date().getFullYear()} Tunza Dada. All rights reserved.</p>
+      </footer>
+    </main>
+  );
+}
