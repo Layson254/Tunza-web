@@ -3,31 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Website</title>
+    <title>Tunza Dada | Empowering Girls and Families</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Charity</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/about.html">About Us</a></li>
-                <li><a href="pages/donate.html">Donate</a></li>
-                <li><a href="volunteer/">Volunteer</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#home" class="brand">Tunza Dada</a>
+            <nav class="site-nav" id="site-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="#volunteer">Volunteer</a>
+                <a href="#donate" class="btn btn-pill btn-primary">Donate</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
+
     <main>
-        <section>
-            <h2>Our Mission</h2>
-            <p>We are dedicated to making a difference in the community through various charitable initiatives.</p>
+        <section class="hero" id="home">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1600&q=80" alt="Girls empowered through community programs" class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <p class="eyebrow">Empowerment starts here</p>
+                <h1>Transforming Lives Through Education, Health, and Opportunity</h1>
+                <p class="hero-copy">Join our mission to support girls, women, and families with dignified programs designed for long-term community impact.</p>
+                <div class="hero-actions">
+                    <a href="#donate" class="btn btn-primary btn-large">Donate Now</a>
+                    <a href="/volunteer/" class="btn btn-outline btn-large">Become a Volunteer</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact-section">
+            <div class="container grid impact-grid">
+                <div class="impact-card">
+                    <h2>6,000+</h2>
+                    <p>Girls supported with sanitary and mentorship programs</p>
+                </div>
+                <div class="impact-card">
+                    <h2>120+</h2>
+                    <p>Single mothers empowered through income-generating training</p>
+                </div>
+                <div class="impact-card">
+                    <h2>25+</h2>
+                    <p>Community programs launched across multiple regions</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="container grid about-grid">
+                <div>
+                    <p class="eyebrow">Why Tunza Dada</p>
+                    <h2>We create pathways for lasting change.</h2>
+                    <p>Through mentorship, menstrual health education, and economic support, we help young girls build confidence and communities achieve resilience. Every donation goes directly to programs that protect dignity and deliver measurable results.</p>
+                    <div class="about-actions">
+                        <a href="pages/programs.html" class="btn btn-primary">View Programs</a>
+                        <a href="#volunteer" class="btn btn-outline">Volunteer Today</a>
+                    </div>
+                </div>
+                <div class="about-image-card">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Community support and mentorship" />
+                </div>
+            </div>
+        </section>
+
+        <section class="programs-section" id="programs">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Our Programs</p>
+                    <h2>Meaningful initiatives that change futures</h2>
+                </div>
+                <div class="grid program-grid">
+                    <article class="program-card">
+                        <h3>Menstrual Health</h3>
+                        <p>Providing education, dignity kits, and safe spaces so girls can stay in school and thrive.</p>
+                        <a href="pages/programs.html#menstrual-health" class="link-arrow">Learn More →</a>
+                    </article>
+                    <article class="program-card">
+                        <h3>Mentorship</h3>
+                        <p>Connecting young women with role models who inspire confidence, career growth, and leadership.</p>
+                        <a href="pages/programs.html#mentorship" class="link-arrow">Learn More →</a>
+                    </article>
+                    <article class="program-card">
+                        <h3>Economic Empowerment</h3>
+                        <p>Supporting mothers and women with business training, seed funding, and financial literacy.</p>
+                        <a href="pages/programs.html#economic-empowerment" class="link-arrow">Learn More →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Gallery</p>
+                    <h2>Stories captured in motion</h2>
+                </div>
+                <div class="carousel" id="gallery-carousel">
+                    <button class="carousel-prev" id="carousel-prev" aria-label="Previous image">‹</button>
+                    <div class="carousel-track" id="carousel-track">
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1518933165971-611dbc9c412d?auto=format&fit=crop&w=900&q=80" alt="Girls learning together" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=900&q=80" alt="Community event" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Volunteer team" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80" alt="Support and donation" />
+                        </div>
+                    </div>
+                    <button class="carousel-next" id="carousel-next" aria-label="Next image">›</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="volunteer-section" id="volunteer">
+            <div class="container grid volunteer-grid">
+                <div class="volunteer-content">
+                    <p class="eyebrow">Volunteer</p>
+                    <h2>Become part of the movement</h2>
+                    <p>Our volunteers help deliver programs, mentor girls, and support community outreach. Your time and skills make a real difference.</p>
+                    <ul class="volunteer-list">
+                        <li>Lead mentorship sessions</li>
+                        <li>Help run health education workshops</li>
+                        <li>Support community fundraising initiatives</li>
+                    </ul>
+                    <div class="about-actions">
+                        <a href="/volunteer/" class="btn btn-primary">Join the Team</a>
+                        <a href="pages/contact.html" class="btn btn-outline">Contact Us</a>
+                    </div>
+                </div>
+                <div class="volunteer-image-card">
+                    <img src="https://images.unsplash.com/photo-1515165562835-c37f37d7562f?auto=format&fit=crop&w=900&q=80" alt="Volunteer speaking with girls" />
+                </div>
+            </div>
+        </section>
+
+        <section class="donate-section" id="donate">
+            <div class="container donate-grid">
+                <div>
+                    <p class="eyebrow">Donate</p>
+                    <h2>Give with impact</h2>
+                    <p>Your support helps us provide hygiene kits, education materials, and direct community support where it matters most.</p>
+                    <a href="pages/donate.html" class="btn btn-primary">Donate Today</a>
+                </div>
+                <div class="donate-card">
+                    <h3>Choose a support level</h3>
+                    <ul class="donate-list">
+                        <li><strong>$15</strong> - One dignity kit</li>
+                        <li><strong>$35</strong> - School supplies for a girl</li>
+                        <li><strong>$75</strong> - Workshop materials for a community session</li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Charity Organization. All rights reserved.</p>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <p class="footer-brand">Tunza Dada</p>
+                <p>© 2026 Tunza Dada. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="pages/contact.html">Contact</a>
+                <a href="/volunteer/">Volunteer</a>
+                <a href="pages/programs.html">Programs</a>
+            </div>
+        </div>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>

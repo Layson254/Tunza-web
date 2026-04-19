@@ -3,37 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer with Our Charity</title>
+    <title>Volunteer | Tunza Dada</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Volunteer with Us</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../pages/about.html">About Us</a></li>
-                <li><a href="../volunteer/">Volunteer</a></li>
-                <li><a href="../pages/donate.html">Donate</a></li>
-                <li><a href="../pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="../index.html#home" class="brand">Tunza Dada</a>
+            <nav class="site-nav" id="site-nav">
+                <a href="../index.html#home">Home</a>
+                <a href="../index.html#about">About</a>
+                <a href="../pages/programs.html">Programs</a>
+                <a href="../volunteer/">Volunteer</a>
+                <a href="../pages/donate.html" class="btn btn-pill btn-primary">Donate</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
+
     <main>
-        <section id="programs">
-            <h2>Volunteer Programs</h2>
-            <p>Join our volunteer team to help support our mission and make a lasting impact in the community.</p>
-            <ul>
-                <li><strong>Community Outreach:</strong> Help us organize events and support families in need.</li>
-                <li><strong>Resource Drives:</strong> Assist with collecting and distributing supplies.</li>
-                <li><strong>Education Support:</strong> Mentor students and offer tutoring services.</li>
-            </ul>
-            <p>If you would like to join one of our volunteer programs, please contact us through the contact page.</p>
+        <section class="about-section">
+            <div class="container about-grid">
+                <div>
+                    <p class="eyebrow">Volunteer with Tunza Dada</p>
+                    <h1>Make a meaningful impact in your community.</h1>
+                    <p>Our network of volunteers supports education, health awareness, and family empowerment efforts in local neighborhoods.</p>
+                    <div class="about-actions">
+                        <a href="../pages/contact.html" class="btn btn-primary">Join the Team</a>
+                        <a href="../pages/donate.html" class="btn btn-outline">Support Our Work</a>
+                    </div>
+                </div>
+                <div class="volunteer-image-card">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Volunteer support" />
+                </div>
+            </div>
+        </section>
+
+        <section class="impact-section">
+            <div class="container volunteer-grid">
+                <div>
+                    <h2>Volunteer Opportunities</h2>
+                    <ul class="volunteer-list">
+                        <li><strong>Community Outreach:</strong> Support community events and participation.</li>
+                        <li><strong>Education Mentoring:</strong> Help girls stay engaged in school through tutoring.</li>
+                        <li><strong>Health Programs:</strong> Assist with menstrual education and supply distribution.</li>
+                    </ul>
+                </div>
+                <div class="donate-card">
+                    <h3>Volunteer Benefits</h3>
+                    <p>Gain experience, connect with local leaders, and support programs that create real change.</p>
+                    <a href="../pages/contact.html" class="btn btn-primary">Volunteer Today</a>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2023 Charity Website. All rights reserved.</p>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <p class="footer-brand">Tunza Dada</p>
+                <p>© 2026 Tunza Dada. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="../pages/about.html">About</a>
+                <a href="../pages/contact.html">Contact</a>
+                <a href="../pages/programs.html">Programs</a>
+            </div>
+        </div>
     </footer>
+
     <script src="../js/main.js"></script>
 </body>
 </html>
