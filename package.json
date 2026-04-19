@@ -1,0 +1,16 @@
+{
+  "name": "charity-website",
+  "version": "1.0.0",
+  "description": "A non-profit charity website to provide information and facilitate donations.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo \"No build step required for this static site\""
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
