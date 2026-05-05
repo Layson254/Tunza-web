@@ -284,6 +284,104 @@ section {
     margin-top: 1.75rem;
 }
 
+.accountability-section {
+    background: #fff;
+}
+
+.accountability-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 2rem;
+}
+
+.accountability-card {
+    padding: 2rem;
+    border-radius: var(--radius);
+    background: #fdf0f6;
+    box-shadow: var(--shadow);
+}
+
+.accountability-card h3 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.accountability-card ul {
+    margin: 1rem 0 0;
+    padding-left: 1.25rem;
+    color: var(--muted);
+}
+
+.accountability-card li {
+    margin-bottom: 0.75rem;
+}
+
+.checklist li {
+    list-style-type: disc;
+}
+
+.fund-allocation {
+    margin-bottom: 2rem;
+}
+
+.allocation-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 1rem;
+}
+
+.allocation-item {
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    background: #fff0f5;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.allocation-item h4 {
+    margin: 0 0 0.5rem;
+    color: var(--accent);
+}
+
+.governance-block,
+.policies-block {
+    background: #fdf4f8;
+    padding: 2rem;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.governance-block h3,
+.policies-block h3 {
+    margin-top: 0;
+    color: var(--accent);
+}
+
+.policies-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.policy-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid rgba(31, 41, 55, 0.08);
+    color: inherit;
+}
+
+.policy-link span:last-child {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
 .program-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -439,20 +537,50 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    text-align: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .footer-brand {
     font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.footer-logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.footer-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1180px;
 }
 
 .footer-contact {
     font-size: 0.95rem;
     color: rgba(229, 231, 235, 0.85);
-    margin-bottom: 1rem;
+    text-align: right;
+    min-width: 280px;
 }
 
 .footer-links {
@@ -474,8 +602,7 @@ section {
 .social-links {
     display: flex;
     gap: 1.25rem;
-    justify-content: center;
-    margin-top: 1rem;
+    justify-content: flex-start;
 }
 
 .social-links a {
@@ -499,9 +626,36 @@ section {
 .footer-copyright {
     font-size: 0.85rem;
     color: rgba(229, 231, 235, 0.7);
-    margin-top: 1.5rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
     padding-top: 1.5rem;
     border-top: 1px solid rgba(229, 231, 235, 0.1);
+}
+
+@media (max-width: 780px) {
+    .footer-bottom-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-contact {
+        text-align: center;
+        min-width: auto;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 520px) {
+    .social-links a {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 960px) {
