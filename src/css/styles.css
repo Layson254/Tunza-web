@@ -321,30 +321,6 @@ section {
     list-style-type: disc;
 }
 
-.fund-allocation {
-    margin-bottom: 2rem;
-}
-
-.allocation-grid {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-top: 1rem;
-}
-
-.allocation-item {
-    padding: 1.5rem;
-    border-radius: var(--radius);
-    background: #fff0f5;
-    text-align: center;
-    box-shadow: var(--shadow);
-}
-
-.allocation-item h4 {
-    margin: 0 0 0.5rem;
-    color: var(--accent);
-}
-
 .governance-block,
 .policies-block {
     background: #fdf4f8;
