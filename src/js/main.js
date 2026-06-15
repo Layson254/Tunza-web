@@ -108,29 +108,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const volunteerForm = document.getElementById("volunteer-form");
-    if (volunteerForm) {
-        volunteerForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-            const formData = new FormData(volunteerForm);
-            const params = {
-                name: formData.get("name"),
-                email: formData.get("email"),
-                message: formData.get("message"),
-                to_email: "hellotunza@gmail.com" // Updated email
-            };
 
-            sendEmail("VOLUNTEER_TEMPLATE_ID", params)
-                .then(() => {
-                    alert("Thank you for signing up to volunteer! We will contact you soon at " + params.email);
-                    volunteerForm.reset();
-                    setTimeout(() => {
-                        window.location.href = "../pages/thank-you.html?type=volunteer";
-                    }, 1000);
-                })
-                .catch((error) => {
-                    console.error("Email send failed:", error);
-                    alert("Your application has been received. We will contact you shortly.");
-                });
-        });
-    }
+if (volunteerForm) {
+    console.log("Volunteer form using Google Forms integration");
+}
 });
